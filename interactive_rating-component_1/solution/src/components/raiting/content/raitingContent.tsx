@@ -8,8 +8,8 @@ export function RaitingContent({ratingScaleLength}:{ratingScaleLength:number}){
 
     const [setStateRaitin, setStateEnterRaiting, stateRaiting] : any= useContext(context);
     const ratingScale = useMemo(() => {
-        return new Array(ratingScaleLength).fill(0).map((element, index:number)=>{
-            return index + 1
+        return new Array(ratingScaleLength).fill(1).map((element, index:number)=>{
+            return index+element
         })
     }, [ratingScaleLength]);
     return <div className='flex flex-col justify-around h-full'>
